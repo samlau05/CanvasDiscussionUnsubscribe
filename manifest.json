@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Canvas Auto Unsubscribe",
+    "version": "1.0",
+    "description": "Automatically unsubscribes from Canvas discussion posts.",
+    "permissions": ["scripting"],
+    "host_permissions": ["*://*.instructure.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.instructure.com/courses/*/discussion_topics/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
